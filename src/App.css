@@ -1,9 +1,10 @@
 body {
   width: 100%;
+  margin: 0;
   background-color: black;
 }
 
-Link {
+a {
   text-decoration: none;
 }
 
@@ -23,12 +24,10 @@ Link {
   margin: 0 50px;
   font-size: 2em;
   color: rgb(243, 252, 240);
-  font-weight: 300;
-  text-decoration: none;
+  font-weight: 300;  
 }
-.nav .logo {
-  text-decoration: none;
-}
+
+
 
 .nav ul {
   display: flex;
@@ -40,25 +39,24 @@ Link {
   justify-content: center;
 }
 
-/* Estilos aplicados directamente a Link */
+
 .nav ul .nav-link {
   font-family: "Bebas Neue", sans-serif;
   font-style: normal;
   font-size: 1em;
   color: rgb(243, 252, 240);
   letter-spacing: 0.05em;
-  text-decoration: none;
   font-weight: 400;
   transition: color 1s ease;
   position: relative;
-  margin: 0 10px; /* Espacio entre los links */
+  margin: 0 10px; 
 }
 
 .nav ul .nav-link:hover {
   color: #EDF42F;
 }
 
-/* Línea animada al hacer hover */
+
 .nav ul .nav-link::after {
   content: "";
   position: absolute;
@@ -74,7 +72,7 @@ Link {
   width: 100%;
 }
 
-.greeting {
+/*.greeting {
   width: 100%;
   text-align: center;
   padding: 5px 0;
@@ -85,8 +83,8 @@ Link {
   color: rgb(20, 33, 61);
   background-color: #EDF42F;
 }
+*/
 
-/* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
   .nav h1 {
     font-size: 2em;
