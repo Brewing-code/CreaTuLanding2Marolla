@@ -9,7 +9,7 @@ const ProductCard = ({product}) => {
 			<img className='image' src={product.img} alt={product.title} />
 			<div className='title'>{product.title}</div>
 			<div className='price'>{product.price}</div>
-            <Link to={`/itemDetail/${product.id}`}>Ver detalle</Link>
+            <Link to={`/itemDetail/${product.id}`} className="detalle">Ver detalle</Link>
 		</div>
   );
 }

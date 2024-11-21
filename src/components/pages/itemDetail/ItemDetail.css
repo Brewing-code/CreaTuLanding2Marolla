@@ -1,0 +1,17 @@
+h2 {
+    color: rgb(243, 252, 240) ;
+    font-family: 'Bebas Neue';
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.itemdetail-container {
+    margin: 20px auto;
+    width: fit-content;
+    
+}
+
+img {
+    width: 50dvw;
+}

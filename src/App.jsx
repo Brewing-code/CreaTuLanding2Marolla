@@ -6,7 +6,8 @@ import ItemDetail from "./components/pages/itemDetail/ItemDetail";
 import Checkout from "./components/pages/checkout/Checkout";
 import './App.css';
 import './components/layouts/navBar/NavBar.css';
-import '../src/components/common/productCard/ProductCard.css'
+import '../src/components/common/productCard/ProductCard.css';
+import './components/pages/itemDetail/ItemDetail.css';
 
 function App() {
   return (

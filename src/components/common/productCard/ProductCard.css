@@ -17,7 +17,7 @@
     position: relative;
     margin: 20px auto;
     font-size: 20px;
-    font-family: Bebas neue;
+    font-family: 'Bebas Neue';
     
 }
 
@@ -27,4 +27,27 @@
     border: 4px solid black;
     border-radius: 10px;
     object-fit: contain;
+}
+
+.detalle {
+    color:  rgb(243, 252, 240);
+}
+
+.detalle:hover {
+    color: #EDF42F;
+}
+
+.detalle::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 11.8dvw;
+  width: 0;
+  height: 2px;
+  background-color: #EDF42F;
+  transition: width 0.3s ease;
+}
+
+.detalle:hover::after {
+    width: 80px;
 }

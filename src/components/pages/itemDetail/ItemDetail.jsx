@@ -13,7 +13,7 @@ const ItemDetail = () => {
   }, [id]);
 
   return (
-    <div>
+    <div className="itemdetail-container">
       <h2>{product.title}</h2>
       <img src={product.img} alt="" />
     </div>
