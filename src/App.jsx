@@ -8,20 +8,27 @@ import './App.css';
 import './components/layouts/navBar/NavBar.css';
 import '../src/components/common/productCard/ProductCard.css';
 import './components/pages/itemDetail/ItemDetail.css';
+import { CartContextProvider } from "./context/CartContext";
+
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <Routes>
-        {/* RUTAS  */}
-        <Route path="/" element={<ItemListContainer />} />
-        <Route path="/category/:name" element={<ItemListContainer />} />
-        <Route path="/cart" element={<CartComponent />} />
-        <Route path="/itemDetail/:id" element={<ItemDetail />} />
-        <Route path="/checkout" element={<Checkout />} />
-      </Routes>
-      {/* <Footer /> */}
+      <CartContextProvider>
+
+        <Navbar />
+        <Routes>
+          {/* RUTAS  */}
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:name" element={<ItemListContainer />} />
+          <Route path="/cart" element={<CartComponent />} />
+          <Route path="/itemDetail/:id" element={<ItemDetail />} />
+          <Route path="/checkout" element={<Checkout />} />
+
+        </Routes>
+      </CartContextProvider>
+        {/* <Footer /> */}
+      
     </BrowserRouter>
   );
 }

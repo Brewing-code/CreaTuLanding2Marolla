@@ -54,6 +54,7 @@ a {
 
 .nav ul .nav-link:hover {
   color: #EDF42F;
+  transition: width 0.3s ease;
 }
 
 

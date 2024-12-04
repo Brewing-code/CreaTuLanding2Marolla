@@ -6,7 +6,7 @@ export const products = [
 		img: "/Imagenes/Iorio.png",
 		description:
 			"Una Triple Ipa para quienes se la bancan de verdad.",
-		price: '$3000',
+		price: 3000,
 		category: "Birras",
 	},
 	{
@@ -16,7 +16,7 @@ export const products = [
 		img: "/Imagenes/IMPERIALSTOUT.png",
 		description:
 			"8 horas de hervido y varias botellas de vino despues, lograron este elixir ",
-		price: '$5000',
+		price: 5000,
 		category: "Remeras",
 	},
 	{
@@ -26,7 +26,7 @@ export const products = [
 		img: "/Imagenes/Indio.png",
 		description:
 			"Fundamentalistas si! Del Indio Solari y del lupulo. Homenaje liquido a dos heroes en este lio.",
-		price: '$3500',
+		price: 3500,
 		category: "Gorras",
 	}
 ]
