@@ -1,14 +1,14 @@
 export const products = [
-	{
-		id: 1,
-		stock: 10,
-		title: "Triple Ipa",
-		img: "/Imagenes/Iorio.png",
-		description:
-			"Una Triple Ipa para quienes se la bancan de verdad.",
-		price: 3000,
-		category: "Birras",
-	},
+	//{
+	//	id: 1,
+	//	stock: 10,
+	//	title: "Triple Ipa",
+	//	img: "/Imagenes/Iorio.png",
+	//	description:
+	//		"Una Triple Ipa para quienes se la bancan de verdad.",
+	//	price: 3000,
+	//	category: "Birras",
+	//},
 	{
 		id: 2,
 		stock: 10,
@@ -20,7 +20,7 @@ export const products = [
 		category: "Remeras",
 	},
 	{
-		id: 3,
+		
 		stock: 10,
 		title: "Doble Indio Pale Ale",
 		img: "/Imagenes/Indio.png",

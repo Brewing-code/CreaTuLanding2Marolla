@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { products } from "../../../data/Products";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
+import { db } from "../../../firebaseConfig";
+import { collection,addDoc, getDocs, query, where  } from "firebase/firestore";
 
 const ItemListContainer = () => {
   const [myProducts, setMyProducts] = useState([]);
@@ -11,24 +12,40 @@ const ItemListContainer = () => {
  
 
   useEffect(() => {
-    let productosFiltrados = products.filter((el) => el.category === name);
-
-    let task = new Promise((res) => {
-      res(name ? productosFiltrados : products);
+    const productsCollection = collection(db, "products");
+    let refCollection = productsCollection;
+    if(name){
+      const productsCollectionFiltered = query (productsCollection, where("category", "==", name))
+      refCollection = productsCollectionFiltered;
+    }
+    const getProducts = getDocs(refCollection);
+    getProducts.then((res) => {
+      let products = res.docs.map ((elemento) => {
+        return {...elemento.data(), id: elemento.id}
+      })
+      setMyProducts(products)
     });
-    task
-      .then((resp) => {
-        setMyProducts(resp);
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .finally(() => {
-        console.log("Finally");
-      });
+
+
+
   }, [name]);
 
-  return <ItemList myProducts={myProducts} />;
+  // const addProducts = () => {
+  //   let refCollection =  collection(db, "products")
+  //   products.forEach (elemento => {
+  //   addDoc(refCollection, elemento)
+
+  //   })
+  // };
+
+  return (
+  //<>
+    <ItemList myProducts={myProducts} />
+  )
+    {/* <button onClick={addProducts}>Agregar productos</button> */}
+  //</>
+  
+  
 };
 
 export default ItemListContainer;
