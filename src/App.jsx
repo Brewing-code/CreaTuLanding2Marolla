@@ -4,31 +4,26 @@ import ItemListContainer from "./components/pages/itemListContainer/ItemListCont
 import CartComponent from "./components/pages/cart/CartComponent";
 import ItemDetail from "./components/pages/itemDetail/ItemDetail";
 import Checkout from "./components/pages/checkout/Checkout";
+import { CartContextProvider } from "./context/CartContext";
 import './App.css';
 import './components/layouts/navBar/NavBar.css';
-import '../src/components/common/productCard/ProductCard.css';
+import './components/common/productCard/ProductCard.css';
 import './components/pages/itemDetail/ItemDetail.css';
-import { CartContextProvider } from "./context/CartContext";
-
 
 function App() {
   return (
     <BrowserRouter>
       <CartContextProvider>
-
         <Navbar />
         <Routes>
-          {/* RUTAS  */}
+          {/* Define routes for the application */}
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/category/:name" element={<ItemListContainer />} />
           <Route path="/cart" element={<CartComponent />} />
           <Route path="/itemDetail/:id" element={<ItemDetail />} />
           <Route path="/checkout" element={<Checkout />} />
-
         </Routes>
       </CartContextProvider>
-        {/* <Footer /> */}
-      
     </BrowserRouter>
   );
 }

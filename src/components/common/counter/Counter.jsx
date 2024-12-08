@@ -1,39 +1,56 @@
-import { useState } from 'react'
-import './Counter.css'
-import { CartContext } from '../../../context/CartContext';
+import { useState } from 'react';
+import './Counter.css';
 import { useContext } from 'react';
+import { CartContext } from '../../../context/CartContext';
 
 const Counter = ({ product }) => {
-    const {addToCart} = useContext(CartContext);
-    const [count, setCount]= useState(1);
-    
+    const { addToCart, cart } = useContext(CartContext);
+    const [count, setCount] = useState(1);
+
+
+    const addedQuantity = cart.filter((item) => item.id === product.id).reduce((total, item) => total + item.quantity, 0);
+    const remainingStock = product.stock - addedQuantity;
+
+   
     const handleIncrement = () => {
-        if(count < product.stock){
+        if (count < remainingStock) {
             setCount(count + 1);
-        };
+        }
     };
 
+   
     const handleDecrement = () => {
-        if(count > 1){
+        if (count > 1) {
             setCount(count - 1);
-        };
+        }
     };
 
+    
     const onAdd = () => {
-        let cartProduct = {...product, quantity: count};
+        let cartProduct = { ...product, quantity: count };
         addToCart(cartProduct);
+        setCount(1); 
+    };
+
+   
+    if (remainingStock <= 0) {
+        return (
+            <div>
+                <h2>Producto sin stock</h2>
+            </div>
+        );
     }
 
-    return(
-        <div className='container'>
-            <div className='buttons'>
-                <button onClick={handleDecrement} className='decrement'> - </button>
-                <span className='counter'>{count}</span>
-                <button onClick={handleIncrement} className='increment'> + </button>
-                <button onClick={onAdd} className='addtocart'>Agregar al carrito</button>
+    return (
+        <div className="container">
+            <div className="buttons">
+                <button onClick={handleDecrement} className="decrement" disabled={count <= 1}> - </button>
+                <span className="counter">{count}</span>
+                <button onClick={handleIncrement} className="increment" disabled={count >= remainingStock}> + </button>
+                <button onClick={onAdd} className="addtocart" disabled={count > remainingStock}>Agregar al carrito</button>
             </div>
         </div>
     );
 };
 
-export default Counter
+export default Counter;

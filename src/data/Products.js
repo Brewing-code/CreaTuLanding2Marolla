@@ -1,16 +1,15 @@
 export const products = [
-	//{
-	//	id: 1,
-	//	stock: 10,
-	//	title: "Triple Ipa",
-	//	img: "/Imagenes/Iorio.png",
-	//	description:
-	//		"Una Triple Ipa para quienes se la bancan de verdad.",
-	//	price: 3000,
-	//	category: "Birras",
-	//},
+	
 	{
-		id: 2,
+		stock: 10,
+		title: "Triple Ipa",
+		img: "/Imagenes/Iorio.png",
+		description:
+			"Una Triple Ipa para quienes se la bancan de verdad.",
+		price: 3000,
+		category: "Birras",
+	},
+	{
 		stock: 10,
 		title: "Lo Que Se Es",
 		img: "/Imagenes/IMPERIALSTOUT.png",

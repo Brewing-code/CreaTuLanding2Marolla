@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { db } from "../../../firebaseConfig";
 import { collection,addDoc, getDocs, query, where  } from "firebase/firestore";
 
+
 const ItemListContainer = () => {
   const [myProducts, setMyProducts] = useState([]);
 
@@ -30,20 +31,20 @@ const ItemListContainer = () => {
 
   }, [name]);
 
-  // const addProducts = () => {
-  //   let refCollection =  collection(db, "products")
-  //   products.forEach (elemento => {
-  //   addDoc(refCollection, elemento)
+  //  const addProducts = () => {
+  //    let refCollection =  collection(db, "products")
+  //    products.forEach (elemento => {
+  //    addDoc(refCollection, elemento)
 
-  //   })
-  // };
+  //  })
+  //  };
 
   return (
-  //<>
     <ItemList myProducts={myProducts} />
   )
-    {/* <button onClick={addProducts}>Agregar productos</button> */}
-  //</>
+  
+  {/* <button onClick={addProducts}>Agregar productos</button> */}
+
   
   
 };
