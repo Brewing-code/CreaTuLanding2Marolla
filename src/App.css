@@ -1,7 +1,18 @@
 body {
   width: 100%;
+  height: 100%;
   margin: 0;
   background-color: black;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column; 
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; 
 }
 
 a {
@@ -44,7 +55,7 @@ a {
   font-family: "Bebas Neue", sans-serif;
   font-style: normal;
   font-size: 1.2em;
-  color: rgb(243, 252, 240);
+  color: #f3fcf0;
   letter-spacing: 0.05em;
   font-weight: 400;
   transition: color 1s ease;

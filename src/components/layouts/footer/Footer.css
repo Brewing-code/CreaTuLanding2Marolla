@@ -1,0 +1,9 @@
+.footer-container {
+    height: 150px;
+    border-top: 2px solid  rgb(237, 244, 47);
+    margin-top: 50px;
+}
+
+.footer-title {
+    font-family: 'Bebas neue';
+}

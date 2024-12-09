@@ -9,20 +9,26 @@ import './App.css';
 import './components/layouts/navBar/NavBar.css';
 import './components/common/productCard/ProductCard.css';
 import './components/pages/itemDetail/ItemDetail.css';
+import Footer from "./components/layouts/footer/Footer";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter className="wrapper">
       <CartContextProvider>
-        <Navbar />
-        <Routes>
-          {/* Define routes for the application */}
-          <Route path="/" element={<ItemListContainer />} />
-          <Route path="/category/:name" element={<ItemListContainer />} />
-          <Route path="/cart" element={<CartComponent />} />
-          <Route path="/itemDetail/:id" element={<ItemDetail />} />
-          <Route path="/checkout" element={<Checkout />} />
-        </Routes>
+        <div className="wrapper">
+          <Navbar />
+          <main>
+            <Routes>
+              {/* Define routes for the application */}
+              <Route path="/" element={<ItemListContainer />} />
+              <Route path="/category/:name" element={<ItemListContainer />} />
+              <Route path="/cart" element={<CartComponent />} />
+              <Route path="/itemDetail/:id" element={<ItemDetail />} />
+              <Route path="/checkout" element={<Checkout />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
       </CartContextProvider>
     </BrowserRouter>
   );

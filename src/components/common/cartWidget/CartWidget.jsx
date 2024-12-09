@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../../context/CartContext';
+import ShoppingCartSharpIcon from '@mui/icons-material/ShoppingCartSharp';
+import './CartWidget.css'
 
 const CartWidget = () => {
   const { getTotalItems } = useContext(CartContext);
@@ -8,7 +10,7 @@ const CartWidget = () => {
 
   return (
     <Link to="/cart">
-      🛒 {totalItems > 0 && <span className="cantidadCarrito">{totalItems}</span>}
+      <ShoppingCartSharpIcon className='cart-icon'></ShoppingCartSharpIcon>{totalItems > 0 && <span className="cantidadCarrito">{totalItems}</span>}
     </Link>
   );
 };

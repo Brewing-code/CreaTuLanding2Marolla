@@ -15,3 +15,15 @@ h2 {
 img {
     width: 50dvw;
 }
+
+.loader {
+    background-color: rgb(0, 0, 0) !important;
+    height: 5px !important;
+    margin: 10px 0 !important;
+}
+
+.loader .MuiLinearProgress-bar {
+    background-color: rgb(237, 244, 47) !important; 
+    height: 5px !important;
+    
+}
