@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import './CartComponent.css'
+import '../cart/CartComponent.css'
 import { useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
 
@@ -20,7 +21,7 @@ const Cart = () => {
                 <h3>Cantidad : {elemento.quantity}</h3>
                 <h3>Precio : ${elemento.price}</h3>
                 <button
-                  className="removeproduct"
+                  className="removeproduct findecompra"
                   onClick={() => removeProduct(elemento.id)}
                 >
                   Eliminar producto/s
@@ -30,7 +31,7 @@ const Cart = () => {
           })}
           <div className="cartbuttons">
             <h3 className="totalamount">El total del carrito es : ${totalAmount}</h3>
-            <button className="resetcart" onClick={resetCart}>Limpiar el carrito</button>
+            <button className="resetcart findecompra" onClick={resetCart}>Limpiar el carrito</button>
             <div className="checkout">
               <Link to="/checkout" className="findecompra">
                 Finalizar compra

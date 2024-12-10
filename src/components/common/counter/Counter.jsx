@@ -7,11 +7,11 @@ const Counter = ({ product }) => {
     const { addToCart, cart } = useContext(CartContext);
     const [count, setCount] = useState(1);
 
-
+    // Calcular cantidad añadida y stock restante
     const addedQuantity = cart.filter((item) => item.id === product.id).reduce((total, item) => total + item.quantity, 0);
     const remainingStock = product.stock - addedQuantity;
 
-   
+// Incrementar cantidad
     const handleIncrement = () => {
         if (count < remainingStock) {
             setCount(count + 1);

@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { CartContext } from "../../../context/CartContext";
 import { db } from "../../../firebaseConfig";
 import {addDoc, collection, updateDoc, doc} from 'firebase/firestore'
+import './checkout.css'
 
 const Checkout = () => {
   const {cart, getTotalPrice, resetCart} = useContext(CartContext)
@@ -24,6 +25,7 @@ const Checkout = () => {
       items: cart,
       total, 
     };
+
     let ordersCollection = collection(db, "orders");
     addDoc(ordersCollection, order)
     .then((res) => setOrderId(res.id));
@@ -41,8 +43,8 @@ const Checkout = () => {
 
 
   return (
-    <div>
-      <h2>Aca el formulario de compra</h2>
+    <div className="form-container">
+      <h2>Completa el formulario con tus datos</h2>
       {
         orderId ? (
           <div>
@@ -51,27 +53,27 @@ const Checkout = () => {
           </div>
         ) : (
 
-      <form onSubmit={funcionDelFormulario}>
-        <input
+      <form className="form-inputs"onSubmit={funcionDelFormulario}>
+        <input className="name"
           type="text"
-          placeholder="nombre"
+          placeholder="Nombre"
           name="nombre"
           onChange={capturarDatos}
         />
-        <input
+        <input className="email"
           type="text"
-          placeholder="email"
+          placeholder="E-mail"
           name="userEmail"
           onChange={capturarDatos}
         />
-        <input
+        <input className="phone"
           type="text"
-          placeholder="telefono"
+          placeholder="Telefono"
           name="telefono"
           onChange={capturarDatos}
         />
-        <button> enviar </button>
-        <button type="button"> cancelar </button>
+        <button className="findecompra"> Enviar </button>
+        
       </form>
         )
       }

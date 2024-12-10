@@ -1,3 +1,6 @@
 .counter{
     color: white;
 }
+.increment {
+    margin: inherit 10px;
+}

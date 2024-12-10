@@ -1,0 +1,40 @@
+input,
+button {
+  all: unset; 
+  box-sizing: border-box; 
+  margin-top: 50px;
+}
+
+.form-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 50px auto;  
+    
+}
+
+.form-inputs {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.name,
+.email,
+.phone {
+    width: 300px;
+    padding: 7px;
+    margin: 12px auto;
+    color: rgba(237, 244, 47, 0.8);
+    background-color: black;
+    border-bottom: 2px solid white;
+    border-top: none ;
+    border-left: none;
+    border-right: none;
+   
+    
+}
