@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './Counter.css';
+import './counter.css';
 import { useContext } from 'react';
 import { CartContext } from '../../../context/CartContext';
 
