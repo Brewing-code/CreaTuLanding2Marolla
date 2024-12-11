@@ -31,7 +31,7 @@ const Cart = () => {
           })}
           <div className="cartbuttons">
             <h3 className="totalamount">El total del carrito es : ${totalAmount}</h3>
-            <button className="resetcart findecompra" onClick={resetCart}>Limpiar el carrito</button>
+            <button className="resetcart" onClick={resetCart}>Limpiar el carrito</button>
             <div className="checkout">
               <Link to="/checkout" className="findecompra">
                 Finalizar compra
