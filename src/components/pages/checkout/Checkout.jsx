@@ -3,9 +3,11 @@ import { CartContext } from "../../../context/CartContext";
 import { db } from "../../../firebaseConfig";
 import {addDoc, collection, updateDoc, doc} from 'firebase/firestore'
 import './checkout.css'
+import { useNavigate } from "react-router-dom";
 
 const Checkout = () => {
   const {cart, getTotalPrice, resetCart} = useContext(CartContext)
+  const navigate = useNavigate();
   const [userData, setUserData] = useState({
     nombre: "",
     userEmail: "",
@@ -72,8 +74,10 @@ const Checkout = () => {
           name="telefono"
           onChange={capturarDatos}
         />
-        <button className="findecompra"> Enviar </button>
-        
+        <div className="buttons-send-back">
+          <button className="findecompra buttons-send-back"> Enviar </button>
+          <button className="findecompra buttons-send-back" onClick={() => navigate("/cart")} > Volver </button>
+        </div>
       </form>
         )
       }

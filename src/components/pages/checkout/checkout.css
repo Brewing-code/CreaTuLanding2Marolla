@@ -2,7 +2,7 @@ input,
 button {
   all: unset; 
   box-sizing: border-box; 
-  margin-top: 50px;
+
 }
 
 .form-container {
@@ -34,7 +34,11 @@ button {
     border-bottom: 2px solid white;
     border-top: none ;
     border-left: none;
-    border-right: none;
-   
-    
+    border-right: none; 
+}
+
+.buttons-send-back {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 20px;
 }

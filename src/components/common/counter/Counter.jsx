@@ -44,10 +44,10 @@ const Counter = ({ product }) => {
     return (
         <div className="container">
             <div className="buttons">
-                <button onClick={handleDecrement} className="decrement" disabled={count <= 1}> - </button>
+                <button onClick={handleDecrement} className="quantity" disabled={count <= 1}> - </button>
                 <span className="counter">{count}</span>
-                <button onClick={handleIncrement} className="increment" disabled={count >= remainingStock}> + </button>
-                <button onClick={onAdd} className="addtocart" disabled={count > remainingStock}>Agregar al carrito</button>
+                <button onClick={handleIncrement} className="quantity" disabled={count >= remainingStock}> + </button>
+                <button onClick={onAdd} className="quantity" disabled={count > remainingStock}>Agregar al carrito</button>
             </div>
         </div>
     );

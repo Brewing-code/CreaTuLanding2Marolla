@@ -7,7 +7,7 @@ import CartWidget from '../../common/cartWidget/CartWidget'
 const NavBar = () => {
     return (
       <nav className='nav'> 
-        <Link to="/"><h1 className="nav-link">Soldier Hops Cerveza</h1></Link>
+        <Link to="/" className="logo-container"><img className="logo" src="https://res.cloudinary.com/djoumjsq8/image/upload/v1734022728/logo_Soldier_e8rool.png"></img></Link>
         <ul>
         <Link to="/" className="nav-link">Home</Link>
         <Link to="/category/Birras" className="nav-link">Birras</Link>

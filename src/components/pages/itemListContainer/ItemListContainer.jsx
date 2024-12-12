@@ -39,6 +39,7 @@ const ItemListContainer = () => {
       <ItemList myProducts={myProducts} />
     )
   } return <LinearProgress className="loader"></LinearProgress>
+    
   
 };
 
