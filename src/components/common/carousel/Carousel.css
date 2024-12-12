@@ -1,0 +1,25 @@
+.carousel-item img {
+    margin-top: 100px;
+    object-fit: contain; 
+    height: 600px; 
+  }
+
+  
+
+.image-carousel {
+    opacity: 1;
+    transition: opacity 4s ease-in-out; 
+  }
+  
+  .carousel-item-next,
+  .carousel-item-prev,
+  .carousel-item.active .image-carousel {
+    opacity: 0;
+  }
+  
+  
+  .carousel-item {
+    position: relative;
+  }
+  
+  

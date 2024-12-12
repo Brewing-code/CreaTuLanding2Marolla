@@ -20,6 +20,7 @@ const Cart = () => {
                 <h3>{elemento.title}</h3>
                 <h3>Cantidad : {elemento.quantity}</h3>
                 <h3>Precio : ${elemento.price}</h3>
+                <h3>Subtotal : ${elemento.quantity * elemento.price}</h3>
                 <button
                   className="removeproduct findecompra"
                   onClick={() => removeProduct(elemento.id)}

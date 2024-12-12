@@ -1,7 +1,7 @@
 .title, .price {
     color: rgb(243, 252, 240);
-    width: 100%; /* Hacerlo más flexible */
-    max-width: 400px; /* Asegúrate de que no crezca demasiado */
+    width: 100%; 
+    max-width: 400px; 
     height: auto;
     display: flex;
     flex-direction: column;
@@ -13,8 +13,8 @@
   .container-img {
     display: flex;
     flex-direction: column;
-    width: 100%; /* Ajuste para mayor adaptabilidad */
-    max-width: 350px; /* Controla el tamaño máximo de la imagen */
+    width: 100%; 
+    max-width: 350px; 
     align-items: center;
     margin: 40px auto;
     font-size: 20px;
@@ -24,34 +24,34 @@
   .image {
     width: 100%; 
     height: auto;
-    max-width: 100%; /* Asegúrate de que no se desborde */
+    max-width: 100%; 
     border: 4px solid black;
     border-radius: 10px;
-    object-fit: contain; /* Mantiene la proporción de la imagen */
+    object-fit: contain; 
   }
 
   .detalle {
     color: rgb(243, 252, 240);
-    position: relative; /* Necesario para el posicionamiento de la pseudo-clase */
-    text-decoration: none; /* Eliminar subrayado por defecto */
-    font-size: 1.2rem; /* Ajusta el tamaño de fuente */
+    position: relative;
+    text-decoration: none; 
+    font-size: 1.2rem; 
   }
   
   .detalle:hover {
-    color: #EDF42F; /* Cambiar color al hacer hover */
+    color: #EDF42F; 
   }
   
   .detalle::after {
     content: "";
     position: absolute;
-    bottom: -2px; /* Posicionar la línea justo debajo del texto */
+    bottom: -2px; 
     left: 0;
     width: 0;
-    height: 2px; /* Altura de la línea */
-    background-color: #EDF42F; /* Color de la línea */
-    transition: width 0.3s ease; /* Transición suave para la línea */
+    height: 2px; 
+    background-color: #EDF42F; 
+    transition: width 0.3s ease; 
   }
   
   .detalle:hover::after {
-    width: 100%; /* Expande la línea a 100% al hacer hover */
+    width: 100%;
   }

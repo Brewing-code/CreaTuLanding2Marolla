@@ -4,6 +4,7 @@ import ItemListContainer from "./components/pages/itemListContainer/ItemListCont
 import CartComponent from "./components/pages/cart/CartComponent";
 import ItemDetail from "./components/pages/itemDetail/ItemDetail";
 import Checkout from "./components/pages/checkout/Checkout";
+import MyCarousel from "./components/common/carousel/Carousel";
 import { CartContextProvider } from "./context/CartContext";
 import './App.css';
 import './components/layouts/navBar/NavBar.css';
@@ -20,7 +21,7 @@ function App() {
           <main>
             <Routes>
               {/* Define routes for the application */}
-              <Route path="/" element={<ItemListContainer />} />
+              <Route path="/" element={<MyCarousel />} />
               <Route path="/category/:name" element={<ItemListContainer />} />
               <Route path="/cart" element={<CartComponent />} />
               <Route path="/itemDetail/:id" element={<ItemDetail />} />
