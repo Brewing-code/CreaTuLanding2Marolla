@@ -1,12 +1,14 @@
 h1 {
-    color: rgb(243, 252, 240);
+    color: white;
     font-family: 'Bebas neue';
     align-items: center;
     margin: 0 auto;
     margin-bottom: 20px;
     padding: 10px;
 }
-
+.pagetitle {
+    color: white;
+}
 .cartdiv {
     display: flex;
     flex-direction: column;

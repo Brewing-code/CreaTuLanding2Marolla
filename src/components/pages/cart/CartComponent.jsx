@@ -13,7 +13,7 @@ const Cart = () => {
     <div className="cartdiv">
       {cart.length > 0 ? (
         <>
-          <h1>Tus Productos</h1>
+          <h1 className="pagetitle">Tus Productos</h1>
           {cart.map((elemento) => {
             return (
               <div key={elemento.id} className="cartproducts">
