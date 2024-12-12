@@ -34,7 +34,7 @@ const ItemDetail = () => {
 
   return (
     <div className="itemdetail-container">
-      <h2>{product.title}</h2>
+      <h2 className="itemdetail-title">{product.title}</h2>
       <img src={product.img} alt={product.title} />
       <Counter product={product} />
     </div>

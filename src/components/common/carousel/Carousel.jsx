@@ -8,12 +8,12 @@ function MainCarousel() {
   return (
     <Carousel 
     interval={3000} 
-    pause="hover" 
+    pause={false}
     fade>
       <Carousel.Item>
         <img
         className="d-block w-100 image-carousel" 
-        src="https://res.cloudinary.com/djoumjsq8/image/upload/v1733351770/Indio_xyor9b.png"></img> 
+        src="https://res.cloudinary.com/djoumjsq8/image/upload/v1734035179/DiaD_kwobrp.jpg"></img> 
         <Carousel.Caption>
           
         </Carousel.Caption>
@@ -21,7 +21,7 @@ function MainCarousel() {
       <Carousel.Item>
       <img 
       className="d-block w-100 image-carousel"
-      src="https://res.cloudinary.com/djoumjsq8/image/upload/v1733351770/IMPERIALSTOUT_aixz3a.png"></img>
+      src="https://res.cloudinary.com/djoumjsq8/image/upload/v1734035177/Wadu_vvp070.jpg"></img>
         <Carousel.Caption>
          
         </Carousel.Caption>
@@ -29,7 +29,15 @@ function MainCarousel() {
       <Carousel.Item>
       <img 
       className="d-block w-100 image-carousel"
-      src="https://res.cloudinary.com/djoumjsq8/image/upload/v1733351770/IMPERIALSTOUT_aixz3a.png"></img>
+      src="https://res.cloudinary.com/djoumjsq8/image/upload/v1734035176/Aniver3_bllxll.jpg"></img>
+        <Carousel.Caption>
+          
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+      <img 
+      className="d-block w-100 image-carousel"
+      src="https://res.cloudinary.com/djoumjsq8/image/upload/v1734035175/Aplanadora_uprl58.jpg"></img>
         <Carousel.Caption>
           
         </Carousel.Caption>
