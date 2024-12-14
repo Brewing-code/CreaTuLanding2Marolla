@@ -18,7 +18,9 @@ h2 {
 }
 
 img {
-    width: 50dvw;
+    width: 95dvw;
+    border: 2px solid black !important;
+    border-radius: 20px !important;
 }
 
 .loader {
@@ -31,4 +33,10 @@ img {
     background-color: rgb(237, 244, 47) !important; 
     height: 5px !important;
     
+}
+
+.description {
+    font-family: 'Bebas neue';
+    font-size: 1.8em;
+    margin: 20px auto;
 }

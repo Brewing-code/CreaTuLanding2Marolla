@@ -36,6 +36,7 @@ const ItemDetail = () => {
     <div className="itemdetail-container">
       <h2 className="itemdetail-title">{product.title}</h2>
       <img src={product.img} alt={product.title} />
+			<div className="description">{product.description}</div>
       <Counter product={product} />
     </div>
   );
