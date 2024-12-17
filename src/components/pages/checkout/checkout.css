@@ -5,6 +5,10 @@ button {
 
 }
 
+.form-title {
+    color: white;
+}
+
 .form-container {
     display:flex;
     flex-direction: column;

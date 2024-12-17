@@ -46,7 +46,7 @@ const Checkout = () => {
 
   return (
     <div className="form-container">
-      <h2>Completa el formulario con tus datos</h2>
+      <h2 className="form-title">Completa el formulario con tus datos</h2>
       {
         orderId ? (
           <div>
