@@ -52,13 +52,33 @@ Sigue estos pasos para clonar y ejecutar el proyecto localmente:
    ```bash
    npm install
    npm install @mui/material @emotion/react @emotion/styled
+   npm install firebase
+ 
+3. Crea el archivo de configuracion de firebase (por ejemplo, 'firebaseConfig.js') y pega este contenido:
+    ```bash
+    import { initializeApp } from "firebase/app";
+    import { getFirestore } from "firebase/firestore";
+        
+        const firebaseConfig = {
+            apiKey:'',
+            authDomain:'',
+            projectId:'', 
+            storageBucket:'',
+            messagingSenderId:'',
+            appId:'', 
+    };
 
 
-3. Ejecuta el servidor de desarrollo:
+    const app = initializeApp(firebaseConfig);
+    export const db = getFirestore(app)
+    };
+Luego, las credenciales las obtendras en la plataforma de firestore, en: configuracion_del_proyecto/general/tusapps.
+
+4. Ejecuta el servidor de desarrollo:
    ```bash
    npm run dev
 
-El proyecto estará disponible en http://localhost:3000.
+
 
 Contribuciones
 
